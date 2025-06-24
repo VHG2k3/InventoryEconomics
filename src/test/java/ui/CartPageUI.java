@@ -11,6 +11,6 @@ public class CartPageUI {
     public static final By INVENTORY_ITEM_PRICE = By.className("inventory_item_price");
     public static final By REMOVE_BTN = By.xpath("//button[contains(text(),'Remove')]");
     public static final By SHOPPING_CONTINUE_BTN = By.id("continue-shopping");
-    public static final By CHECKOUT_BTN = By.id("checkout");
+    public static final By CHECKOUT_BTN = By.xpath("//button[@id='checkout']");
 
 }

@@ -51,4 +51,7 @@ public class CartPage {
         }
         return temp;
     }
+    public void clickCheckoutBtn(){
+        driver.findElement(CartPageUI.CHECKOUT_BTN).click();
+    }
 }

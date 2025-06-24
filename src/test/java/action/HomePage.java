@@ -101,5 +101,7 @@ public class HomePage {
         }
         return temp;
     }
-
+    public void clickCartIcon(){
+        driver.findElement(HomePageUI.CART_ICON).click();
+    }
 }

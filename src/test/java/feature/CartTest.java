@@ -3,12 +3,16 @@ package feature;
 import action.CartPage;
 import action.HomePage;
 import action.LoginPage;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ui.CartPageUI;
 import ui.HomePageUI;
 import untils.Hook;
+
+import java.time.Duration;
 
 public class CartTest extends Hook {
     LoginPage loginPage;
@@ -26,7 +30,9 @@ public class CartTest extends Hook {
         homePage.getProductAddToCart("Sauce Labs Backpack", "$29.99").findElement(HomePageUI.ADD_TO_CART_BTN).click();
         homePage.getProductAddToCart("Sauce Labs Bike Light", "$9.99").findElement(HomePageUI.ADD_TO_CART_BTN).click();
         homePage.getProductAddToCart("Sauce Labs Bolt T-Shirt", "$15.99").findElement(HomePageUI.ADD_TO_CART_BTN).click();
-        driver.findElement(HomePageUI.CART_ICON).click();
+        homePage.clickCartIcon();
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.urlContains("https://www.saucedemo.com/cart.html"));
         cartPage = new CartPage(driver);
     }
     @Test

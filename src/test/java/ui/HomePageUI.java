@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class HomePageUI {
     public static final By HOME_TITLE = By.className("app_logo");
-    public static final By CART_ICON = By.className("shopping_cart_container");
+    public static final By CART_ICON = By.className("shopping_cart_link");
     public static final By PRODUCT_SORT = By.className("product_sort_container");
     public static final By INVENTORY_ITEM = By.className("inventory_item");
     public static final By INVENTORY_ITEM_NAME = By.className("inventory_item_name");
